@@ -29,10 +29,10 @@ class Zonas
   Zonas(int _x, int _y) {
     id_x = _x;
     id_y = _y;    
-    x = id_x * 10 + 10;
-    y = id_y * 10 + 10;
-    tam_x = 10;
-    tam_y = 10;
+    x = id_x * zonas_cell + zonas_off_x;
+    y = id_y * zonas_cell + zonas_off_y;
+    tam_x = zonas_cell;
+    tam_y = zonas_cell;
     fin_x = x + tam_x;
     fin_y = y + tam_y;
     si_cambio = false;

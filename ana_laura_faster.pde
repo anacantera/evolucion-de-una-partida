@@ -26,8 +26,12 @@ int fin_y;
 
 //Objetos
 Zonas zona[][];//objetos del tipo Bolita
-int zonas_x = 60;
-int zonas_y = 40;
+int zonas_cell = 40;
+int zonas_x = 7;
+int zonas_y = 7;
+int zonas_off_x = (ancho_camara - (zonas_cell*zonas_x))/2;
+int zonas_off_y = (alto_camara - (zonas_cell*zonas_y))/2;
+
 
 // Variables de control de menu
 int menu = 0;
@@ -47,7 +51,7 @@ int cierre = 254;
 
 boolean bUseSerial = false;
 boolean bLoadEstado = true;
-
+boolean bSaveAllFiles = false;
 
 //---------------------------------------//
 //---------------------------------------//

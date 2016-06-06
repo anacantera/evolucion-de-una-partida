@@ -5,7 +5,7 @@ void inicio() {
 
   background(0);
  // listArduinosNames = Serial.list();
-   println(Serial.list());
+   
  // if (listArduinosNames.length < 4) {
     //noLoop();
    // println("Error No aRduino Connected");
@@ -14,6 +14,7 @@ void inicio() {
     //String portName = Serial.list()[0]; //<>//
     //serial = new Serial(this, portName, 9600);
    if(bUseSerial){
+     println(Serial.list());
      String portName = Serial.list()[0];
      serial = new Serial(this, portName, 9600);
    }
