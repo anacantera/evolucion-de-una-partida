@@ -6,14 +6,18 @@ void calculo_imagen() {
   int aux_g=0;
   int aux_b=0;
 
+  camara.loadPixels();
+  int p = 0;
+
   for ( int i = 0; i < zonas_x; i++ ) {
     for ( int j = 0; j < zonas_y; j++ ) {
       int contador = 0; 
       for ( int x = zona[i][j].x; x < zona[i][j].fin_x; x++ ) {
         for ( int y = zona[i][j].y; y < zona[i][j].fin_y; y++ ) {
-          aux_r += red(camara.get(x, y));
-          aux_g += green(camara.get(x, y));
-          aux_b += blue(camara.get(x, y));
+          p = y * camara.width + x;
+          aux_r += camara.pixels[p] >> 16 & 0xFF;//red(camara.get(x, y));
+          aux_g += camara.pixels[p] >> 8 & 0xFF;//green(camara.get(x, y));
+          aux_b += camara.pixels[p] & 0xFF;//blue(camara.get(x, y));
           contador++;
         }//for y
       }//for x
@@ -29,7 +33,6 @@ void calculo_imagen() {
   if (hay_cambios) {
     save_estado("1");
   }
-
 }
 
 
@@ -38,14 +41,22 @@ void calculo_imagen_inicial() {
   int aux_g=0;
   int aux_b=0;
 
+  camara.loadPixels();
+  int p = 0;
+
+
   for ( int i = 0; i < zonas_x; i++ ) {
     for ( int j = 0; j < zonas_y; j++ ) {
       int contador = 0; 
       for ( int x = zona[i][j].x; x < zona[i][j].fin_x; x++ ) {
         for ( int y = zona[i][j].y; y < zona[i][j].fin_y; y++ ) {
-          aux_r += red(camara.get(x, y));
-          aux_g += green(camara.get(x, y));
-          aux_b += blue(camara.get(x, y));
+          //aux_r += red(camara.get(x, y));
+          //aux_g += green(camara.get(x, y));
+          //aux_b += blue(camara.get(x, y));
+          p = y * camara.width + x;
+          aux_r += camara.pixels[p] >> 16 & 0xFF;//red(camara.get(x, y));
+          aux_g += camara.pixels[p] >> 8 & 0xFF;//green(camara.get(x, y));
+          aux_b += camara.pixels[p] & 0xFF;//blue(camara.get(x, y));
           contador++;
         }//for y
       }//for x
