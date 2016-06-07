@@ -51,8 +51,8 @@ int cierre = 254;
 
 boolean bUseSerial = false;
 boolean bLoadEstado = true;
-boolean bSaveAllFiles = false;
-
+boolean bSaveAllFiles = true;
+boolean bUseMouseControl = false;
 //---------------------------------------//
 //---------------------------------------//
 void setup() {

@@ -25,6 +25,6 @@ void keyPressed() {
   if (key=='l') {  
     //analisis de la imagen en pantalla
     calculo_imagen();
-  }
+  }else if(key == '}') bUseMouseControl = !bUseMouseControl;
 
 }
