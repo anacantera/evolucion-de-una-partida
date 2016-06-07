@@ -20,7 +20,9 @@ void inicio() {
    }
    
    //inicio las imagennes
-    camara = new Capture(this, ancho_camara, alto_camara); 
+   String[] cameras = Capture.list();
+    //camara = new Capture(this, ancho_camara, alto_camara); 
+    camara = new Capture(this, cameras[12]);
     //inicio los textos
 
     texto  = createFont("Georgia", 16);
