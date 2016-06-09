@@ -27,6 +27,11 @@ void control_serial_simple() {
       if ( zona[i][j].si_cambio  == true)
       { 
         total_cambio++;
+        //zona[i][j].si_cambio  = false;
+                
+        //cuantos_seriales--;
+
+
       }
     }
   }

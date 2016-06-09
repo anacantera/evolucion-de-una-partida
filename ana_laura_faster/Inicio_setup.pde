@@ -14,13 +14,14 @@ void inicio() {
     //String portName = Serial.list()[0]; //<>//
     //serial = new Serial(this, portName, 9600);
    if(bUseSerial){
-     println(Serial.list());
+   //  println(Serial.list());
      String portName = Serial.list()[0];
      serial = new Serial(this, portName, 9600);
    }
    
    //inicio las imagennes
    String[] cameras = Capture.list();
+   println(Capture.list());
     //camara = new Capture(this, ancho_camara, alto_camara); 
     camara = new Capture(this, cameras[12]);
     //inicio los textos

@@ -58,7 +58,7 @@ class Zonas
     if(d > umbral){
       cuanto_cambio = int(d);
       cuantos_cambios ++;
-      if(si_cambio == false){cuantos_seriales ++;}
+      if(si_cambio == false){cuantos_seriales++;}
       
       cuanto_cambio = constrain(cuanto_cambio,0,500);
       cuanto_cambio = int(map(cuanto_cambio,0,500,0,10));
@@ -67,7 +67,7 @@ class Zonas
       r = _r;
       g = _g;
       b = _b;
-    }
+    }else si_cambio = false;
     /*
    if(r != _r || g != _g || b != _b){
       //cambio algo
