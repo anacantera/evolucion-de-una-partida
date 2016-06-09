@@ -37,7 +37,7 @@ class Zonas
     fin_y = y + tam_y;
     si_cambio = false;
     
-     x_muestra = (camara.width + 10) + (_x*4);
+     x_muestra = (ancho_camara + 10) + (_x*4);
      y_muestra = 10 + (_y*4);
   }
 

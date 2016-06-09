@@ -49,7 +49,7 @@ int cuantos_seriales = 0;
 int encabezado = 255;
 int cierre = 254;
 
-boolean bUseSerial = false;
+boolean bUseSerial = true;
 boolean bLoadEstado = true;
 boolean bSaveAllFiles = true;
 boolean bUseMouseControl = false;
@@ -68,8 +68,8 @@ void draw() {
   }  
   visuales() ;
   
-  if(bUseSerial) control_serial();
-  
+  //if(bUseSerial) control_serial();
+  control_serial_simple();
   
   //---------------------------------------//
   // control de tiempo
